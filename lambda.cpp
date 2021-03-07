@@ -34,9 +34,8 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
-            int result = f(1);
 
-            assert(result == 3);
+            assert(f(1) == 3);
         }
     }
 
@@ -45,7 +44,6 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
-            int result = f(1);
 
             assert(f(1) == 3);
         }
@@ -57,7 +55,6 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
-            int result = f(1);
 
             assert(f(1) == 3);
         }
@@ -70,7 +67,6 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
-            int result = f(1);
 
             assert(f(1) == 3);
         }
@@ -82,7 +78,6 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
-            int result = f(1);
 
             assert(f(1) == 3);
         }
@@ -94,7 +89,6 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
-            int result = f(1);
 
             assert(f(1) == 3);
         }
@@ -107,7 +101,6 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
-            int result = f(1);
 
             assert(f(1) == 3);
         }
@@ -118,7 +111,6 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
-            int result = f(1);
 
             assert(f(1) == 3);
         }
@@ -131,7 +123,6 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
-            int result = f(1);
 
             assert(f(1) == 3);
         }
