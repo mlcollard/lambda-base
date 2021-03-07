@@ -1,7 +1,7 @@
 /*
     lambda.cpp
 
-    Examples of captures in lambda functions and use of std::funct
+    Examples of captures in lambda functions and use of std::function
 */
 
 #include <functional>
