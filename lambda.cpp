@@ -5,6 +5,7 @@
 */
 
 #include <functional>
+#include <iostream>
 #include <sstream>
 #include <assert.h>
 
