@@ -8,17 +8,12 @@
 #include <sstream>
 #include <assert.h>
 
-// NOTE: return type for C++ functions/methods
-double average1(int n1, int n2);
+int add(int n1, int n2) {
+    return n1 + n2;
+}
 
-// NOTE: trailing return type for C++ functions/methods
-// NOTE: For non-lambda, requires auto
-
-
-// runs code with argument 1
-int run(std::function<int(int)> code) {
-
-    return code(1);
+int add2(int n) {
+    return n + 2;
 }
 
 class Application {
@@ -34,92 +29,104 @@ public:
 
 int main(int argc, char* argv[]) {
 
-    // empty capture
+    // function
     {
-        auto result = run(
-            [](int n)->int {
-                return n + 2;
-            }
-        );
-        assert(result == 3);
+        std::function<int(int)> f;
+
+        if (f != nullptr) {
+            int result = f(1);
+
+            assert(result == 3);
+        }
     }
 
-    // empty capture, use constant
+    // empty capture
     {
-        constexpr int INCR = 2;
-        auto result = run(
-            [](int n)->int {
-                return n + 2;
-            }
-        );
-        assert(result == 3);
+        std::function<int(int)> f;
+
+        if (f != nullptr) {
+
+            assert(f(1) == 3);
+        }
     }
-    
+
+    // const variable capture reference
+    {
+        const int INCR = 2;
+        std::function<int(int)> f;
+
+        if (f != nullptr) {
+
+            assert(f(1) == 3);
+        }
+    }
+
     // capture variable because not constexpr
     {
         int size = 2;
-        const int incr = size;
-        auto result = run(
-            [](int n)->int {
-                return n + 2;
-            }
-        );
-        assert(result == 3);
+        const int INCR = size;
+        std::function<int(int)> f;
+
+        if (f != nullptr) {
+
+            assert(f(1) == 3);
+        }
     }
 
     // non-const variable capture value
     {
         int incr = 2;
-        auto result = run(
-            [](int n)->int {
-                return n + 2;
-            }
-        );
-        assert(result == 3);
+        std::function<int(int)> f;
+
+        if (f != nullptr) {
+
+            assert(f(1) == 3);
+        }
     }
 
-    // non-const variable capture reference
+    // capture the number of times the function is executed
     {
-        const int INCR = 2;
         int numrun = 0;
-        auto result = run(
-            [](int n)->int {
-                return n + 2;
-            }
-        );
-        assert(result == 3);
+        std::function<int(int)> f;
+
+        if (f != nullptr) {
+
+            assert(f(1) == 3);
+        }
     }
 
-    // pass complex object
+    // pass complex object and use inside lambda
     {
         std::istringstream input("2");
-        auto result = run(
-            [](int n)->int {
-                return n + 2;
-            }
-        );
-        assert(result == 3);
+
+        std::function<int(int)> f;
+
+        if (f != nullptr) {
+
+            assert(f(1) == 3);
+        }
     }
 
-    // pass static method
+    // pass static method of a class
     {
-        auto result = run(
-            [](int n)->int {
-                return n + 2;
-            }
-        );
-        assert(result == 3);
+        std::function<int(int)> f;
+
+        if (f != nullptr) {
+
+            assert(f(1) == 3);
+        }
     }
 
-    // pass method
+    // pass non-static method of a class
     {
         Application application;
-        auto result = run(
-            [](int n)->int {
-                return n + 2;
-            }
-        );
-        assert(result == 3);
+
+        std::function<int(int)> f;
+
+        if (f != nullptr) {
+
+            assert(f(1) == 3);
+        }
     }
 
     return 0;
