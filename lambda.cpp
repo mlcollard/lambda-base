@@ -1,7 +1,7 @@
 /*
     lambda.cpp
 
-    Examples of captures in lambda functions
+    Examples of captures in lambda functions and use of std::funct
 */
 
 #include <functional>
@@ -45,6 +45,7 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
+            int result = f(1);
 
             assert(f(1) == 3);
         }
@@ -56,6 +57,7 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
+            int result = f(1);
 
             assert(f(1) == 3);
         }
@@ -68,6 +70,7 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
+            int result = f(1);
 
             assert(f(1) == 3);
         }
@@ -79,6 +82,7 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
+            int result = f(1);
 
             assert(f(1) == 3);
         }
@@ -90,6 +94,7 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
+            int result = f(1);
 
             assert(f(1) == 3);
         }
@@ -102,6 +107,7 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
+            int result = f(1);
 
             assert(f(1) == 3);
         }
@@ -112,6 +118,7 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
+            int result = f(1);
 
             assert(f(1) == 3);
         }
@@ -124,6 +131,7 @@ int main(int argc, char* argv[]) {
         std::function<int(int)> f;
 
         if (f != nullptr) {
+            int result = f(1);
 
             assert(f(1) == 3);
         }
